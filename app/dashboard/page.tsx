@@ -3,6 +3,7 @@
 import { useAction } from "convex/react";
 import { api } from "@/convex/_generated/api";
 import { useState } from "react";
+import { toast } from "sonner";
 
 export default function WebIngest() {
     const [urls, setUrls] = useState("");
@@ -17,7 +18,7 @@ export default function WebIngest() {
 
         try {
             await processUrls({ urls: urlArray });
-            alert("Websites ingested!");
+            alert("Websites added!");
             setUrls("");
         } catch (e) {
             alert("Error: " + (e as Error).message);

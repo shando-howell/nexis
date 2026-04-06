@@ -22,14 +22,14 @@ export default function Chat() {
             <input
                 value={question}
                 onChange={(e) => setQuestion(e.target.value)}
-                className="border p-2"
+                className="border p-2 min-w-96"
                 placeholder="Ask something..."
             />
 
             <button onClick={handleAsk} className="bg-blue-500 text-white p-2 ml-2">
                 Ask a question.
             </button>
-            <div className="mt-4">{answer}</div>
+            <div className="mt-4 border-white p-2">{answer}</div>
         </div>
     )
 }
