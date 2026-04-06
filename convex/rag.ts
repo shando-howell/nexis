@@ -19,10 +19,10 @@ export const answerQuestion = action({
         // 2. Search Convex for similar text chunks
         const results = await ctx.vectorSearch("documents", "by_embedding", {
             vector,
-            limit: 3
+            limit: 3,
+            // filter: (q) => q.eq("fileId", targetFileId), // Optional: filter by specific PDF
         });
 
-        // TO FIX
         // 3. Fetch the actual text for those matches
         const chunks = await Promise.all(
             results.map((r) => ctx.runQuery(api.documents.getDocument, {documentId: r._id}))
