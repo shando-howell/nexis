@@ -30,7 +30,7 @@ export default function WebIngest() {
     return (
         <div className="p-4 flex flex-col flex-1 items-center justify-center h-full">
             <div className="p-4 border rounded-xl shadow-sm bg-white">
-                <h1 className="text-2xl font-bold">Add Page to AI Knowledge Base</h1>
+                <h1 className="text-2xl font-bold">Add a page knowledge base</h1>
                 <textarea
                     className="w-full p-2 rounded-md h-32 mb-4 text-indigo-600"
                     placeholder="Add URL..."
@@ -43,7 +43,7 @@ export default function WebIngest() {
                     disabled={isLoading}
                     className="bg-blue-500 text-white px-4 py-2 rounded-md disabled:opacity-50"
                 >
-                    {isLoading ? "Processing Page..." : "Submit Page"}
+                    {isLoading ? "Processing Page..." : "Add Page"}
                 </button>
             </div>
         </div>

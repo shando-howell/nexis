@@ -7,7 +7,7 @@ import { SendHorizonal, Loader2 } from "lucide-react";
 
 export default function Chat() {
     const [question, setQuestion] = useState("");
-    const [answer, setAnswer] = useState("Ask Nexis a question based on the provided web pages.");
+    const [answer, setAnswer] = useState("Ask Nexis a question based on your provided web pages.");
     const [isLoading, setIsLoading] = useState(false);
     const ask = useAction(api.rag.answerQuestion);
 
@@ -41,7 +41,7 @@ export default function Chat() {
                             value={question}
                             onChange={(e) => setQuestion(e.target.value)}
                             className="flex-1 py-2 px-4 rounded-2xl border focus:ouline-none pr-12 bg-gray-50 placeholder:text-gray-500"
-                            placeholder="Ask something..."
+                            placeholder="Ask a question..."
                         />
 
                         <button 
