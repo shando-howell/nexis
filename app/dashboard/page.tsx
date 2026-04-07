@@ -30,7 +30,7 @@ export default function WebIngest() {
     return (
         <div className="p-4 flex flex-col flex-1 items-center justify-center h-full">
             <div className="p-4 border rounded-xl shadow-sm bg-white">
-                <h1 className="text-2xl font-bold">Add a page knowledge base</h1>
+                <h1 className="text-2xl font-bold">Add page to knowledge base</h1>
                 <textarea
                     className="w-full p-2 rounded-md h-32 mb-4 text-indigo-600"
                     placeholder="Add URL..."
