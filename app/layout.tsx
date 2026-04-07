@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import { ClerkProvider } from "@clerk/nextjs";
-import ConvexClerkProvider from "./components/ConvexProviderWithClerk";
+import ConvexClerkProvider from "../components/ConvexProviderWithClerk";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Header from "./components/Header";
+import Header from "../components/Header";
+import { Toaster } from "@/components/ui/sonner";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -35,6 +36,7 @@ export default function RootLayout({
           <ConvexClerkProvider>
             <Header />
             {children}
+            <Toaster />
           </ConvexClerkProvider>
         </ClerkProvider>
       </body>
