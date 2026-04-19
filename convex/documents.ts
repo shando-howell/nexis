@@ -28,3 +28,21 @@ export const getDocument = query({
         return document;
     }
 })
+
+export const getKnowledgeBaseSources = query({
+  handler: async (ctx) => {
+    // To add auth logic
+
+    // Fetch all chunks
+    const chunks = await ctx.db
+      .query("documents")
+      .collect();
+
+      // Deduplicate by the "fileName" field (which stores our URLs)
+      const uniqueSources = Array.from(new Set(chunks.map((c) => c.fileName)));
+
+      return uniqueSources.map(url => ({
+        url
+      }));
+  },
+});

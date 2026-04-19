@@ -7,6 +7,7 @@ import { toast } from "sonner";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Globe, Plus } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { KnowledgebaseList } from "@/components/KnowledgbaseList";
 
 export default function WebIngest() {
     const [urls, setUrls] = useState("");
@@ -105,7 +106,7 @@ export default function WebIngest() {
                             </CardDescription>
                         </CardHeader>
                         <CardContent className="text-gray-200">
-                            Webpage Table
+                            <KnowledgebaseList />
                         </CardContent>
                     </Card>
                 </div>
