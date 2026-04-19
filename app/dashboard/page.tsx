@@ -106,7 +106,7 @@ export default function WebIngest() {
                             </CardDescription>
                         </CardHeader>
                         <CardContent className="text-gray-200">
-                            <KnowledgebaseList />
+                            {/* <KnowledgebaseList /> */}
                         </CardContent>
                     </Card>
                 </div>
