@@ -37,7 +37,7 @@ export default function Chat() {
             </section>
 
             {/* Input */}
-            <footer className="border-t p-4">
+            <footer className="border-t p-4 bg-indigo-800/80">
                 <div className="max-w-4xl mx-auto relative">
                     <div className="relative flex items-center">
                         <input
@@ -49,7 +49,7 @@ export default function Chat() {
 
                         <button 
                             onClick={handleAsk}
-                            className="absolute right-1.5 rounded-xl h-9 w-9 p-0 flex items-center justify-center transition-all bg-blue-500 text-white">
+                            className="absolute right-1.5 rounded-xl h-9 w-9 p-0 flex items-center justify-center transition-all bg-indigo-600/80 text-white">
                             <SendHorizonal />
                         </button>
                     </div>
