@@ -3,7 +3,7 @@
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { oneDark } from "react-syntax-highlighter/dist/esm/styles/prism";
+import { dark } from "react-syntax-highlighter/dist/esm/styles/prism";
 
 export function AIResponse({ content }: { content: string }) {
     return (
@@ -14,7 +14,7 @@ export function AIResponse({ content }: { content: string }) {
                     const match = /language-(\w+)/.exec(className || '');
                     return !inline && match ? (
                         <SyntaxHighlighter
-                            style={oneDark}
+                            style={dark}
                             language={match[1]}
                             PreTag="div"
                             {...props}
@@ -22,7 +22,7 @@ export function AIResponse({ content }: { content: string }) {
                             {String(children).replace(/\n$/,'')}
                         </SyntaxHighlighter>
                     ) : (
-                        <code className="bg-gray-200 dark:bg-gray-800 rounded px-1" {...props}>
+                        <code className="bg-gray-200 dark:bg-gray-400 rounded px-1" {...props}>
                             { children }
                         </code>
                     );
