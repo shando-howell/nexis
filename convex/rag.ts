@@ -33,7 +33,7 @@ export const answerQuestion = action({
         const completion = await openai.chat.completions.create({
             model: "gpt-4o",
             messages: [
-                {role: "system", content: "Answer the question using ONLY the provided context."},
+                {role: "system", content: "You are a technical assistant. Always return responses in Markdown. Use triple backticks for code blocks and always specify the language (eg., ```typescript). Answer the question using ONLY the provided context."},
                 {role: "user", content: `Context: ${context} \n\n Question: ${question}`},
             ],
         });

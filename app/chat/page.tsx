@@ -4,6 +4,7 @@ import { useAction } from "convex/react";
 import { api } from "@/convex/_generated/api";
 import { useState } from "react";
 import { SendHorizonal, Loader2 } from "lucide-react";
+import { AIResponse } from "@/components/AIResponse";
 
 export default function Chat() {
     const [question, setQuestion] = useState("");
@@ -30,7 +31,9 @@ export default function Chat() {
                 <div className="flex items-center justify-center">
                     {isLoading && <Loader2 className="size-10 animate-spin text-muted-foreground"/>}
                 </div>
-                <div className="p-2 text-2xl">{answer}</div>
+                <div className="p-2 text-2xl">
+                    <AIResponse content={answer} />
+                </div>
             </section>
 
             {/* Input */}
