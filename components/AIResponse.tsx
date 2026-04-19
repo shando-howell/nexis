@@ -35,9 +35,14 @@ export function AIResponse({ content }: { content: string }) {
             components={{
                 code({ node, inline, className, children, ...props }: any) {
                     const match = /language-(\w+)/.exec(className || '');
+                    const codeString = String(children).replace(/\n$/,'');
+
                     return !inline && match ? (
                         <div className="relative group my-4">
                             <div className="absolute left-4 top-2 text-xs text-gray-400 uppercase font-mono pointer-events-none">
+                                {match[1]}
+                            </div>
+                            <CopyButton text={codeString} />
                                 <SyntaxHighlighter
                                     style={dark}
                                     language={match[1]}
@@ -45,9 +50,8 @@ export function AIResponse({ content }: { content: string }) {
                                     className="rounded-lg mt-0 pt-8"
                                     {...props}
                                 >
-                                    {String(children).replace(/\n$/,'')}
+                                    {codeString}
                                 </SyntaxHighlighter>
-                            </div>
                         </div>
                     ) : (
                         <code className="bg-gray-200 dark:bg-gray-200 rounded px-1 py-0.5 font-mono text-sm" {...props}>
