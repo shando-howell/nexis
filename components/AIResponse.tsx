@@ -54,7 +54,7 @@ export function AIResponse({ content }: { content: string }) {
                                 </SyntaxHighlighter>
                         </div>
                     ) : (
-                        <code className="bg-gray-200 dark:bg-gray-200 rounded px-1 py-0.5 font-mono" {...props}>
+                        <code className="bg-gray-200 dark:bg-indigo-200 text-pink-700 rounded px-1 py-0.5 font-mono" {...props}>
                             { children }
                         </code>
                     );

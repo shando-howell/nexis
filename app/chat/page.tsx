@@ -37,7 +37,7 @@ export default function Chat() {
             </section>
 
             {/* Input */}
-            <footer className="border-t p-4 bg-linear-to-r from-blue-600 via-purple-600 to-pink-600">
+            <footer className="border-t p-4 bg-linear-to-r from-blue-600/60 via-purple-600/60 to-pink-600/60">
                 <div className="max-w-4xl mx-auto relative">
                     <div className="relative flex items-center">
                         <input
