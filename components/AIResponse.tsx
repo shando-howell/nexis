@@ -39,7 +39,7 @@ export function AIResponse({ content }: { content: string }) {
 
                     return !inline && match ? (
                         <div className="relative group my-4">
-                            <div className="absolute left-4 top-2 text-xs text-gray-400 uppercase font-mono pointer-events-none">
+                            <div className="absolute left-4 top-2 text-xs text-teal-600 uppercase font-mono pointer-events-none">
                                 {match[1]}
                             </div>
                             <CopyButton text={codeString} />
@@ -54,7 +54,7 @@ export function AIResponse({ content }: { content: string }) {
                                 </SyntaxHighlighter>
                         </div>
                     ) : (
-                        <code className="bg-gray-200 dark:bg-gray-200 rounded px-1 py-0.5 font-mono text-sm" {...props}>
+                        <code className="bg-gray-200 dark:bg-gray-200 rounded px-1 py-0.5 font-mono" {...props}>
                             { children }
                         </code>
                     );
