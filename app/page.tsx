@@ -14,7 +14,7 @@ export default async function Home() {
         <div className="absolute inset-0 bg-linear-to-r from-blue-500/10 via-purple-500/10 to-pink-500/10"/>
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top, rgba(120,119,198,0.3),transparent_50%)]"/>
       
-        <div className="relative mx-auto max-w-7xl px-4 py-36 sm:px-6 lg:px-8 mb-25">
+        <div className="relative mx-auto max-w-7xl px-4 py-36 sm:px-6 lg:px-8 mb-32">
           <div className="text-center">
             <h1 className="text-4xl font-bold tracking-tight sm:text-6xl lg:text-7xl">
               <span className="bg-linear-to-r from-white via-blue-600 to-white bg-clip-text text-transparent">
