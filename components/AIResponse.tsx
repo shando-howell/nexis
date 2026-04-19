@@ -22,7 +22,7 @@ export function AIResponse({ content }: { content: string }) {
                             {String(children).replace(/\n$/,'')}
                         </SyntaxHighlighter>
                     ) : (
-                        <code className="bg-gray-200 dark:bg-gray-200 text-shadow-purple-700 rounded px-1" {...props}>
+                        <code className="bg-gray-200 dark:bg-gray-200 rounded px-1" {...props}>
                             { children }
                         </code>
                     );

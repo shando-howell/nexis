@@ -31,7 +31,7 @@ export default function Chat() {
                 <div className="flex items-center justify-center">
                     {isLoading && <Loader2 className="size-10 animate-spin text-muted-foreground"/>}
                 </div>
-                <div className="p-2">
+                <div className="p-2 text-2xl">
                     <AIResponse content={answer} />
                 </div>
             </section>
