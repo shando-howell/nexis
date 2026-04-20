@@ -29,7 +29,7 @@ export default function Chat() {
             {/* Answers */}
             <section className="flex-1 overflow-y-auto p-2 md:p-0">
                 <div className="flex items-center justify-center">
-                    {isLoading && <Loader2 className="size-10 animate-spin text-muted-foreground"/>}
+                    {isLoading && <div className="animate-pulse text-2xl">Loading response...</div>}
                 </div>
                 <div className="p-2 text-2xl">
                     <AIResponse content={answer} />
