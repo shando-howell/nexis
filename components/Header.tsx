@@ -8,7 +8,7 @@ import { Button } from "./ui/button";
 
 const Header = () => {
     return (
-        <header className={`sticky top-0 w-full text-gray-200 bg-indigo-800/80 backdrop-blur supports-backdrop-filter:bg-background/60`}>
+        <header className={`sticky top-0 w-full text-gray-200 bg-indigo-800/80 backdrop-blur supports-backdrop-filter:bg-background/60 z-10`}>
             <div className="mx-auto flex h-14 max-w-7xl items-center gap-2 px-4">
                 <div className="flex-1 text-3xl uppercase tracking-widest">
                     <Link href="/">Nexis</Link>
