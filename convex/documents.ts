@@ -1,4 +1,6 @@
-import { internalMutation, query } from "./_generated/server";
+import { 
+  internalMutation, query, mutation
+} from "./_generated/server";
 import { v } from "convex/values";
 
 export const insertChunk = internalMutation({
@@ -46,3 +48,22 @@ export const getKnowledgeBaseSources = query({
       }));
   },
 });
+
+// Remove a url
+export const removeUrl = mutation({
+  args: { url: v.string() },
+  handler: async (ctx, { url }) => {
+    // 1. Find all chunks belonging to the specific URL
+    const chunks = await ctx.db
+      .query("documents")
+      .filter((q) => q.eq(q.field("fileName"), url))
+      .collect();
+
+      // 2. Delete all chunks
+      for (const chunk of chunks) {
+        await ctx.db.delete(chunk._id);
+      }
+
+    return { sucess: true, deletedCount: chunks.length}
+  }
+})

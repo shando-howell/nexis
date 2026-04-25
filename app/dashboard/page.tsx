@@ -5,7 +5,7 @@ import { api } from "@/convex/_generated/api";
 import { useState } from "react";
 import { toast } from "sonner";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Globe, Plus } from "lucide-react";
+import { Plus } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { KnowledgebaseList } from "@/components/KnowledgbaseList";
 
@@ -51,11 +51,8 @@ export default function WebIngest() {
                             <div className="space-y-6">
                                 <div className="flex flex-col md:flex-row gap-4">
                                     <div className="flex-1 relative">
-                                        <div className="absolute left-4 top-1/2 transform -translate-y-1/2 rounded-md bg-blue-900/30 z-10">
-                                            <Globe className="w-6 h-6 text-blue-400" />
-                                        </div>
                                         <input
-                                            className="w-full pl-14 h-14 text-base text-gray-200 border-2 border-indigo-800/80 focus:border-indigo-400 bg-indigo-900/40 backdrop-blur-sm shadow-sm"
+                                            className="w-full pl-4 h-14 text-base text-gray-200 border-2 border-indigo-800/80 focus:border-indigo-400 bg-indigo-900/40 backdrop-blur-sm shadow-sm"
                                             placeholder="Enter a web page..."
                                             value={urls}
                                             onChange={(e) => setUrls(e.target.value)}
@@ -106,7 +103,7 @@ export default function WebIngest() {
                             </CardDescription>
                         </CardHeader>
                         <CardContent className="text-gray-200">
-                            {/* <KnowledgebaseList /> */}
+                            <KnowledgebaseList />
                         </CardContent>
                     </Card>
                 </div>
