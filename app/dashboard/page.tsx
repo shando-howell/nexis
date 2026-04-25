@@ -108,6 +108,11 @@ export default function WebIngest() {
                     </Card>
                 </div>
             </div>
+
+            {/* Footer */}
+            <div className="flex justify-center text-purple-400 text-2xl">
+                <p>Nexis &copy; 2026</p>
+            </div>
         </div>
     )
 }
